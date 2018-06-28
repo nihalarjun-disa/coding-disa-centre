@@ -1,0 +1,66 @@
+@onKey = (key) =>
+    # Example:
+    if key == keyboard.right
+        @step 2
+        timer.start(60)
+    if key ==  keyboard.left
+        @step -2 
+    if key == keyboard.up 
+        @jump 1
+@onCollide tiger, () =>
+    @setX 0
+    @setY 0
+    mySound1.play()
+@onCollide elephant, () =>
+    @setX 0
+    @setY 0 
+    mySound1.play()
+@onCollide hippo, () =>
+    @setX 100
+    @setY 100
+    mySound1.play()
+@onCollide frog, () =>
+    @setX 0
+    @setY 0 
+    mySound1.play()
+@onCollide hedgehog, () =>
+    @setX 0
+    @setY 0 
+    mySound1.play()
+@onCollide powerup, () => 
+    @setSpeed 2
+    @jump 3 
+    @setScale 2
+    mySound3.play()
+@onCollide powerup1, () => 
+    @setSpeed 3
+    @setScale 2 
+    @jump 3
+    mySound3.play()
+@onCollide chocolate, () => 
+    @setSpeed 1 
+    @setScale 1
+    mySound2.play()
+    
+@onCollide giraffe, () =>
+    @setX 0
+    @setY 0
+    mySound1.play()
+@onCollide zebra, () =>
+    @setX 0
+    @setY 0
+    mySound1.play()
+@onCollide tiger1, () =>
+    @setX 0
+    @setY 0 
+    mySound1.play()
+
+Coins 
+@onCollide monkey, () =>
+    @destroy() 
+    score.value +=1000
+    mySound.play() 
+animal code  
+loop
+    @step 100
+    @step -100
